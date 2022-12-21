@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block title%} | Search  {%endblock%}
 {%block content%}
 {%load humanize%}
 
@@ -105,7 +105,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Here's your <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Sexiest cars list</p>
         </div>
         <div class="row">
           {% for car in cars %}
@@ -135,26 +135,26 @@
                                     <div class="car-magnify-gallery">
                                         <a href="{{car.car_photo.url}}" class="overlap-btn">
                                             <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="img/car/car-1.jpg">
+                                            <img class="hidden" src="{{car.car_photo.url}}">
                                         </a>
                                         {% if car.car_photo1%}
                                         <a href="{{car.car_photo1.url}}" class="hidden">
-                                            <img class="hidden" src="img/car/car-2.jpg">
+                                            <img class="hidden" src="{{car.car_photo1.url}}">
                                         </a>
                                         {% endif %}
                                         {% if car.car_photo2%}
                                         <a href="{{car.car_photo2.url}}" class="hidden">
-                                            <img class="hidden" src="img/car/car-3.jpg">
+                                            <img class="hidden" src="{{car.car_photo2.url}}">
                                         </a>
                                         {% endif %}
                                         {% if car.car_photo3%}
                                         <a href="{{car.car_photo3.url}}" class="hidden">
-                                            <img class="hidden" src="img/car/car-4.jpg">
+                                            <img class="hidden" src="{{car.car_photo3.url}}g">
                                         </a>
                                         {% endif %}
                                         {% if car.car_photo4%}
                                         <a href="{{car.car_photo4.url}}" class="hidden">
-                                            <img class="hidden" src="img/car/car-4.jpg">
+                                            <img class="hidden" src="{{car.car_photo4.url}}">
                                         </a>
                                         {% endif %}
 
